@@ -1,0 +1,11 @@
+server:
+  forward-headers-strategy: framework
+  port: '64203'
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        opaquetoken:
+          client-id: localhost
+          introspection-uri: http://localhost:64200/oauth2/introspect
+          client-secret: localhost
